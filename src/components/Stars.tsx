@@ -6,9 +6,9 @@ type Count = {
 }
 
 const Stars = (props: Count) => {
-    let { count = 0 } = props;
+    const { count = 0 } = props;
     if (count < 1 || count > 5 || typeof count !== "number") return;
-    let countList: number[] = [];
+    const countList: number[] = [];
     while (countList.length < count) countList.push(0);
     return (
         <ul className="card-body-stars u-clearfix">
